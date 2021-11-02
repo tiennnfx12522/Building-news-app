@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <title>Project 4</title>
+</head>
+
+<body>
+    <div class="container sticky-top" style="background-color: orange;">
+        <h1 class="text-center">Top News
+            <span>
+                <button class="openBtn" onclick="openSearch()">
+                    <i class="fa fa-search" style="font-size:36px"></i>
+                </button>
+            </span>
+        </h1>
+    </div>
+
+    <!--Modal content-->
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content col-sm-12 col-md-8 col-lg-6">
+            <input id="inputKeyword" type="text" placeholder="Search..." name="search">
+            <button id="search"><i class="fa fa-search"></i></button>
+            <div id="from">
+                <label class="col-sm-3 col-md-6" for="startDate">Start date:</label>
+                <input class="col-sm-9 col-md-12" type="date" id="startDate" class="time">
+            </div>
+            <div id="to">
+                <label class="col-sm-3 col-md-6" for="endDate">End date:</label>
+                <input class="col-sm-9 col-md-12" type="date" id="endDate" class="time">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul id="news-block"></ul>
+    </div>
+
+    <div hidden id="spinner"></div>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</body>
+
+</html>
